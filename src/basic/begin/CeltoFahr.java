@@ -20,8 +20,8 @@ public class CeltoFahr {
 
         double fahr = cel * 9/5 + 32;
         // 커밋되는지 확인용
-        System.out.printf("입력한 섭씨: %.1℃", cel);
-        System.out.printf("변환한 화씨: %.1℉", cel);
+        System.out.printf("입력한 섭씨: %.1f℃\n", cel);
+        System.out.printf("변환한 화씨: %.1f℉\n", fahr);
 
         sc.close();
     }
