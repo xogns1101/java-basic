@@ -1,4 +1,4 @@
-package basic;
+package basic.begin;
 
 public class VariableExample {
     public static void main(String[] args) {

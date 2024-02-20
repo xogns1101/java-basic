@@ -16,6 +16,18 @@ public class TextualExample {
          - String은 기본 데이터 타입은 아니지만 자주 쓰이기 때문에
          기본 데이터 타입처럼 사용합니다. (사실은 객체 타입)
          */
+
+        String s1 = "my dream ";
+        String s2 = "is a programmer";
+
+        // 문자열의 덧셈 연산 -> 문자열을 단순히 연결해서 결합한 결과.
+        System.out.println(s1 + s2);
+
+        // 문자열과 다른 데이터 타입간의 연산 -> 무조건 문자열 덧셈 연산의 결과와 같다.
+        int month = 10;
+        int day = 13;
+
+        System.out.println("내 생일은 "+ month + "월 " + day + "일 입니다." );
     }
 
 
