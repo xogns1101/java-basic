@@ -13,9 +13,17 @@ public class CeltoFahr {
          # ㄹ 한자 7 -> (℃),   ㄹ 한자 다음장 4 -> (℉)
          */
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("섭씨 온도를 입력하세요: ");
-        double celsius = scanner.nextDouble();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("온도를 입력하세요.('C): ");
+        double cel = sc.nextDouble();
+
+        double fahr = cel * 9/5 + 32;
+        // 커밋되는지 확인용
+        System.out.printf("입력한 섭씨: %.1℃", cel);
+        System.out.printf("변환한 화씨: %.1℉", cel);
+
+        sc.close();
     }
     }
 
