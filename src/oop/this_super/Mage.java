@@ -1,8 +1,15 @@
 package oop.this_super;
 
+import javax.naming.Name;
+
 public class Mage extends Player {
 
     int mana;
+
+    Mage(String name){
+        super(name);
+        this.mana = 60;
+    }
 
     @Override
     void characterInfo() {
