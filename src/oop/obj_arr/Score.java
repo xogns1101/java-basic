@@ -20,6 +20,16 @@ public class Score {
     private int total;
     private double average;
 
+    public Score() {}
+
+    public Score(String name, int kor, int eng, int math) {
+        this.name = name;
+        this.kor = kor;
+        this.eng = eng;
+        this.math = math;
+//        s.setTotalAndAvg();
+    }
+
     public String getName() {
         return name;
     }
