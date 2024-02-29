@@ -28,7 +28,7 @@ public class TryCatchExample {
         } catch (Exception e) {
             // catch 블록에는 try 블록에서 실제 예외가 발생했을 경우
             // 실행할 코드를 작성합니다.
-            System.out.println("0으로 나누시면 어떡해요!");
+            System.out.println("예외 발생!");
         }
         System.out.println("프로그램 정상 종료!");
 
