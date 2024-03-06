@@ -12,7 +12,7 @@ public class FileWriterEx {
          - 기본적으로 2바이트 단위로 처리하기 때문에 문자 쓰기에 적합합니다.
          */
 
-        try(FileWriter fw = new FileWriter( "C:Myworkspace/merong.txt")) {
+        try(FileWriter fw = new FileWriter( "C:\\Myworkspace\\merong.txt")) {
 
             // \r: 캐리지 리턴 -> 커서를 맨 앞으로 땡기는 동작.
             // \n: 줄 개행(줄바꿈)
