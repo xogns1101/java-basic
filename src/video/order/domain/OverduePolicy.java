@@ -12,7 +12,7 @@ public class OverduePolicy {
         LocalDate now = LocalDate.now(); // 현재 날짜
         LocalDate returnDate = order.getReturnDate(); // 대여 주문 당시 세팅된 반납 날짜.
 
-        if(returnDate.isBefore(now)) { // 반납 날짜가 오늘보다 이르다 -> 반납이 늦음 (연체!)
+        if (returnDate.isBefore(now)) { // 반납 날짜가 오늘보다 이르다 -> 반납이 늦음 (연체!)
             return (int) ChronoUnit.DAYS.between(returnDate, now);
         }
 
@@ -25,4 +25,21 @@ public class OverduePolicy {
         return overdueDay * BASE_OVERDUE_CHARGE;
     }
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

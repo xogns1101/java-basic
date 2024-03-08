@@ -20,7 +20,7 @@ public class AppUi {
         } catch (InputMismatchException e) {
             System.out.println("# 올바른 정수 입력값이 아닙니다!");
         } finally {
-            sc.nextLine(); // try 에서도(엔터 입력값), catch(쓰레기 문자열 수거) 에서도 nextLine 이 동작해야함
+            sc.nextLine(); // try에서도(엔터 입력값), catch에서도(쓰레기 문자열 수거) nextLine()이 동작해야 함.
         }
         return num;
     }
@@ -68,7 +68,10 @@ public class AppUi {
         makeLine();
     }
 
+
 }
+
+
 
 
 

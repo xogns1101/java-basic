@@ -11,6 +11,7 @@ import java.util.Map;
 import static video.common.Condition.*;
 
 public class MovieRepository {
+
     private static final Map<Integer, Movie> movieDatabase = new HashMap<>();
 
     static {
@@ -56,8 +57,6 @@ public class MovieRepository {
         } else {
             return searchAll();
         }
-
-
     }
 
     private List<Movie> searchAll() {
@@ -66,24 +65,22 @@ public class MovieRepository {
             Movie movie = movieDatabase.get(key);
             searchedList.add(movie);
         }
-
         return searchedList;
     }
 
     // 문자열을 숫자로 변환하는 과정에서 예외 발생 가능성이 있기 때문에 throws 추가.
-    private List<Movie> searchByPubYear(String keyword) throws NumberFormatException{
+    private List<Movie> searchByPubYear(String keyword) throws NumberFormatException {
         List<Movie> searchedList = new ArrayList<>();
 
-        // 입력값을 String 으로 받았기 때문에 int 로 변환해서 비교
+        // 입력값을 String으로 받았기 때문에 int로 변환해서 비교
         int targetYear = Integer.parseInt(keyword);
 
         for (int key : movieDatabase.keySet()) {
             Movie movie = movieDatabase.get(key);
-            if(movie.getPubYear() == targetYear) {
+            if (movie.getPubYear() == targetYear) {
                 searchedList.add(movie);
             }
         }
-
         return searchedList;
     }
 
@@ -92,11 +89,10 @@ public class MovieRepository {
 
         for (int key : movieDatabase.keySet()) {
             Movie movie = movieDatabase.get(key);
-            if(movie.getNation().equals(keyword)) {
+            if (movie.getNation().equals(keyword)) {
                 searchedList.add(movie);
             }
         }
-
         return searchedList;
     }
 
@@ -105,11 +101,10 @@ public class MovieRepository {
 
         for (int key : movieDatabase.keySet()) {
             Movie movie = movieDatabase.get(key);
-            if(movie.getMovieName().equals(keyword)) {
+            if (movie.getMovieName().equals(keyword)) {
                 searchedList.add(movie);
             }
         }
-
         return searchedList;
     }
 
@@ -121,14 +116,15 @@ public class MovieRepository {
     public List<Movie> searchByRental(boolean possible) {
         List<Movie> searchedList = new ArrayList<>();
 
-        if (possible) { // 대여 가능한 Movie 들만 거르기
-           for (int key : movieDatabase.keySet()) {
-                 Movie movie = movieDatabase.get(key);
+        if (possible) { // 대여 가능한 Movie들만 거르기
+            for (int key : movieDatabase.keySet()) {
+                Movie movie = movieDatabase.get(key);
                 if (!movie.isRental()) {
                     searchedList.add(movie);
                 }
             }
-        } else { // 이미 대여중인 Movie 들만 거르기
+
+        } else { // 이미 대여중인 Movie들만 거르기
             for (int key : movieDatabase.keySet()) {
                 Movie movie = movieDatabase.get(key);
                 if (movie.isRental()) {
@@ -144,4 +140,26 @@ public class MovieRepository {
     public Movie searchMovie(int movieNumber) {
         return movieDatabase.get(movieNumber);
     }
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
