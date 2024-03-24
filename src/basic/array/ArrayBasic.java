@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ArrayBasic {
 
+    // ㅋㅓ밋확인용
     public static void main(String[] args) {
 
         // #배열(array)
